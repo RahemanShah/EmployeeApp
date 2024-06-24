@@ -97,30 +97,30 @@ public class EmployeeServiceTestSuite {
 		assertEquals(employee.getId(), service.saveEmployee(employee));
 	}
 
-	@Test
-	@Order(5)
-	void Test_UpdateEmployee() {
-
-		int empId = 1;
-		Employee empUpdate = new Employee();
-		empUpdate.setId(empId);
-
-		when(empRepo.findById(empId)).thenReturn(Optional.of(empUpdate));
-		when(empRepo.save(any(Employee.class))).thenAnswer(emp -> emp.getArgument(0));
-	
-		ArrayList<Employee> updateEmp = new ArrayList<>();
-		updateEmp.forEach(emp ->{
-			
-			emp.setCourse(empUpdate.getCourse());
-			emp.setFee(empUpdate.getFee());
-			emp.setGmail(empUpdate.getGmail());
-			emp.setName(empUpdate.getName());
-			emp.setAddress(empUpdate.getAddress());
-			
-			assertEquals(updateEmp, service.updateEmployee(emp, empId));
-		});
-
-		
-
-	}
+//	@Test
+//	@Order(5)
+//	void Test_UpdateEmployee() {
+//
+//		int empId = 1;
+//		Employee empUpdate = new Employee();
+//		empUpdate.setId(empId);
+//
+//		when(empRepo.findById(empId)).thenReturn(Optional.of(empUpdate));
+//		when(empRepo.save(any(Employee.class))).thenAnswer(emp -> emp.getArgument(0));
+//	
+//		ArrayList<Employee> updateEmp = new ArrayList<>();
+//		updateEmp.forEach(emp ->{
+//			
+//			emp.setCourse(empUpdate.getCourse());
+//			emp.setFee(empUpdate.getFee());
+//			emp.setGmail(empUpdate.getGmail());
+//			emp.setName(empUpdate.getName());
+//			emp.setAddress(empUpdate.getAddress());
+//			
+//			assertEquals(updateEmp, service.updateEmployee(emp, empId));
+//		});
+//
+//		
+//
+//	}
 }

@@ -35,27 +35,27 @@ public class EmployeeService {
 	}
 
 
-	public Employee updateEmployee(Employee employee, Integer id) {
-		
-		Optional<Employee> existingEmployee = empRepo.findById(employee.getId());
-
-	    if (existingEmployee.isPresent()) {
-	    	
-	        Employee updatedEmployee = existingEmployee.get();
-
-	       
-	        updatedEmployee.setName(employee.getName());
-	        updatedEmployee.setFee(employee.getFee());
-	        updatedEmployee.setGmail(employee.getGmail());
-	        updatedEmployee.setCourse(employee.getCourse());
-	        updatedEmployee.setAddress(employee.getAddress());
-
-	        return empRepo.save(updatedEmployee);
-	        
-	    } else {
-	        throw new RuntimeException("Employee not found with id: " + employee.getId());
-	    }
-	}
+//	public Employee updateEmployee(Employee employee, Integer id) {
+//		
+//		Optional<Employee> existingEmployee = empRepo.findById(employee.getId());
+//
+//	    if (existingEmployee.isPresent()) {
+//	    	
+//	        Employee updatedEmployee = existingEmployee.get();
+//
+//	       
+//	        updatedEmployee.setName(employee.getName());
+//	        updatedEmployee.setFee(employee.getFee());
+//	        updatedEmployee.setGmail(employee.getGmail());
+//	        updatedEmployee.setCourse(employee.getCourse());
+//	        updatedEmployee.setAddress(employee.getAddress());
+//
+//	        return empRepo.save(updatedEmployee);
+//	        
+//	    } else {
+//	        throw new RuntimeException("Employee not found with id: " + employee.getId());
+//	    }
+//	}
 
 
 	public void deleteEmployee(Integer id) {

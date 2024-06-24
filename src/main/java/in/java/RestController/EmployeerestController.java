@@ -147,15 +147,15 @@ public class EmployeerestController {
 	}
 	
 	
-	@PutMapping("/update/{id}")
-	public ResponseEntity<Employee> updateEmployee(@RequestBody Employee emp, @PathVariable Integer id){
-		
-		Employee updateEmployee = service.updateEmployee(emp, id);
-		if(updateEmployee!=null) {
-			return new ResponseEntity<Employee>(updateEmployee, HttpStatus.ACCEPTED);
-		}
-		return new ResponseEntity<Employee>(updateEmployee, HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+//	@PutMapping("/update/{id}")
+//	public ResponseEntity<Employee> updateEmployee(@RequestBody Employee emp, @PathVariable Integer id){
+//		
+//		Employee updateEmployee = service.updateEmployee(emp, id);
+//		if(updateEmployee!=null) {
+//			return new ResponseEntity<Employee>(updateEmployee, HttpStatus.ACCEPTED);
+//		}
+//		return new ResponseEntity<Employee>(updateEmployee, HttpStatus.INTERNAL_SERVER_ERROR);
+//	}
 	
 	
 }
