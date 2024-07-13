@@ -88,6 +88,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>SpringbootEmployeeManagement-0.0.1-SNAPSHOT</finalName>
 	</build>
 
 </project>
